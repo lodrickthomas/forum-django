@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block title %}Login{% endblock title %}
+{% block body %}
+
+<h2>This is registration page</h2>
+<form method="post">
+  {% csrf_token %}
+
+  {{ form.as_p }}
+
+  <button type="submit" class="btn btn-sm btn-primary">Register</button>
+{# <div class="first-column">{{ form.some_field }}</div> #}
+
+
+
+</form>
+
+
+
+{% comment %} <h2>Register</h2>
+<form action="" method="post" id="register">
+   {% csrf_token %}
+
+
+   <div class="fieldWrapper">
+      {{ form.username.errors }}
+      {{ form.username.label_tag }}
+      {{ form.username }}
+   </div>
+   <div class="fieldWrapper">
+    {{ form.first_name.errors }}
+    {{ form.first_name.label_tag }}
+    {{ form.first_name }}
+ </div>
+ <div class="fieldWrapper">
+  {{ form.last_name.errors }}
+  {{ form.last_name.label_tag }}
+  {{ form.last_name }}
+</div>
+   <div class="fieldWrapper">
+      {{ form.email.errors }}
+      {{ form.email.label_tag }}
+      {{ form.email }}
+   </div>
+   <div class="fieldWrapper">
+      {{ form.password1.errors }}
+      {{ form.password1.label_tag }}
+      {{ form.password1 }}
+   </div>
+   <div class="fieldWrapper">
+      {{ form.password2.errors }}
+      {{ form.password2.label_tag }}
+      {{ form.password2 }}
+   </div>
+
+   <input type="submit" value="Register"/>
+</form> {% endcomment %}
+
+{% endblock %}
