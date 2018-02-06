@@ -19,6 +19,10 @@ class RegistrationForm(UserCreationForm):
         }
         # field_order = ['username', 'first_name','last_name', 'email', 'password1', 'password2']
 
+
+    # def __init__(self,commit=True,*args, **kwargs):
+    #     user = kwargs.pop('user', None).save(commit=False)
+
     def save(self,commit=True):
         user = super(RegistrationForm,self).save(commit=False)
         user.first_name = self.cleaned_data['first_name']
